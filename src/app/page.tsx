@@ -64,7 +64,7 @@ export default function Home() {
         </div>
         <div className="py-4">
           <div className="font-semibold">Connect with me</div>
-          <div className="flex text-sm w-1/2 justify-between">
+          <div className="flex text-sm w-1/2 justify-between pt-4">
             {socialMediaData.map((info, index) => (
               <Link
                 className="no-underline bg-gradient-to-r from-black to-black underline-animation dark:from-white dark:to-white"
@@ -84,11 +84,21 @@ export default function Home() {
         <div>
           {projectData.map((project, index) => (
             <div key={index} className="p-4 rounded-lg">
-              <Link href={project.url} target="_blank">
-                <h2 className="text-sm">{project.title}</h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {project.description}
-                </p>
+              <div className="flex items-center">
+                <Link
+                  className="text-sm no-underline bg-gradient-to-r from-black to-black underline-animation dark:from-white dark:to-white"
+                  href={project.url}
+                  target="_blank"
+                >
+                  {project.title}
+                </Link>
+              </div>
+              <Link
+                className="text-sm text-gray-500 dark:text-gray-400"
+                href={project.url}
+                target="_blank"
+              >
+                {project.description}
               </Link>
             </div>
           ))}
@@ -107,10 +117,12 @@ export default function Home() {
               <h3 className="text-sm font-semibold text-gray-900 dark:text-white">
                 {experience.role}
               </h3>
-              <Link href={experience.companyURL} target="_blank">
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {experience.company}
-                </p>
+              <Link
+                className="text-sm text-gray-500 dark:text-gray-400"
+                href={experience.companyURL}
+                target="_blank"
+              >
+                {experience.company}
               </Link>
             </div>
           ))}
