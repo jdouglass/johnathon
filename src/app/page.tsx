@@ -64,7 +64,7 @@ export default function Home() {
         </div>
         <div className="py-4">
           <div className="font-semibold">Connect with me</div>
-          <div className="flex text-sm w-1/2 justify-between pt-4">
+          <div className="flex text-sm md:w-1/2 justify-between pt-4">
             {socialMediaData.map((info, index) => (
               <Link
                 className="no-underline bg-gradient-to-r from-black to-black underline-animation dark:from-white dark:to-white"
